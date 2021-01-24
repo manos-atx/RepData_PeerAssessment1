@@ -175,11 +175,11 @@ table(df_impute$typeOfDay)
 df_impute_interval_tod <- with(df_impute, tapply(steps, list(typeOfDay, interval), mean))
 
 par(mfrow = c(2,1), mar = c(2,2,2,2))
-plot(intervals, df_impute_interval_tod[1,], type = "l", main = "Weekend average steps per interval", xlab = "", ylab = "", ylim = c(0, 250), cex.main = 0.7, cex.lab = 0.7, cex.axis = 0.7)
-plot(intervals,df_impute_interval_tod[2,], type = "l", main = "Weekday average steps per interval", xlab = "", ylab = "", ylim = c(0, 250), cex.main = 0.7, cex.lab = 0.7, cex.axis = 0.7)
+plot(intervals, df_impute_interval_tod[1,], type = "l", main = "Weekday average steps per interval", xlab = "", ylab = "", ylim = c(0, 250), cex.main = 0.7, cex.lab = 0.7, cex.axis = 0.7)
+plot(intervals,df_impute_interval_tod[2,], type = "l", main = "Weekend average steps per interval", xlab = "", ylab = "", ylim = c(0, 250), cex.main = 0.7, cex.lab = 0.7, cex.axis = 0.7)
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
 
 The patterns appear to be similar on weekends and weekdays with the exception of 
-the morning peak which appears to be more pronounced on the weekends.
+the morning peak which appears to be more pronounced on weekdays.
